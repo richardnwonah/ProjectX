@@ -1,0 +1,60 @@
+@model ProjectX.Models.Shipment
+
+@{
+    ViewBag.Title = "Edit Shipment";
+}
+
+<h2 class="text-center mt-5">Edit Shipment</h2>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card p-4" style="background-color: rgba(255, 255, 255, 0.8); border-radius: 10px;">
+                <form asp-action="Edit" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label for="Passcode">Passcode:</label>
+                        <input asp-for="Passcode" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ItemName">Item Name:</label>
+                        <input asp-for="ItemName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="Location">Location:</label>
+                        <input asp-for="Location" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="OwnersName">Owners Name:</label>
+                        <input asp-for="OwnersName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="OwnersMail">Owners Mail:</label>
+                        <input asp-for="OwnersMail" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ShipmentWeight">Shipment Weight:</label>
+                        <input asp-for="ShipmentWeight" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="Destination">Destination:</label>
+                        <input asp-for="Destination" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ShipmentStartDate">Shipment Start Date:</label>
+                        <input asp-for="ShipmentStartDate" type="date" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="DeliveryDate">Delivery Date:</label>
+                        <input asp-for="DeliveryDate" type="date" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="Passls">Passls:</label>
+                        <input asp-for="Passls" class="form-control" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

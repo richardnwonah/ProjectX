@@ -1,0 +1,59 @@
+@model ProjectX.Models.Shipment
+
+@{
+    ViewBag.Title = "Shipment Details";
+}
+
+<h2 class="text-center mt-5">Shipment Details</h2>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card p-4" style="background-color: rgba(255, 255, 255, 0.8); border-radius: 10px;">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Item Name:</label>
+                        <p class="form-control-plaintext">@Model.ItemName</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Location:</label>
+                        <p class="form-control-plaintext">@Model.Location</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Owners Name:</label>
+                        <p class="form-control-plaintext">@Model.OwnersName</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Owners Mail:</label>
+                        <p class="form-control-plaintext">@Model.OwnersMail</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Shipment Weight:</label>
+                        <p class="form-control-plaintext">@Model.ShipmentWeight</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Destination:</label>
+                        <p class="form-control-plaintext">@Model.Destination</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Shipment Start Date:</label>
+                        <p class="form-control-plaintext">@Model.ShipmentStartDate.ToShortDateString()</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Delivery Date:</label>
+                        <p class="form-control-plaintext">@Model.DeliveryDate.ToShortDateString()</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Passls:</label>
+                        <p class="form-control-plaintext">@Model.Passls</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add these scripts at the end of the file to include Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
